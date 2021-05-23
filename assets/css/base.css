@@ -29,3 +29,11 @@
     padding: 12px;
     margin: 10px;
 }
+
+.backdrop {
+    /* position: absolute; */
+    background-image: url("../images/img1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 89.5vh;
+}
