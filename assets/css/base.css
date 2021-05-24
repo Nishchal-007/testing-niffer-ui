@@ -37,3 +37,12 @@
     background-size: cover;
     height: 89.5vh;
 }
+
+.row {
+    padding-top: 10px;
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+}

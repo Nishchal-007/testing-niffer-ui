@@ -55,6 +55,7 @@
                             margin: 18px;
                             font-size: 28px;
                             font-weight: 700;
+                            letter-spacing: 2px;
                         "
                         >NIFFLER</a
                     >
@@ -96,6 +97,7 @@
                                 margin: 14px;
                                 font-weight: 700;
                                 font-size: 22px;
+                                letter-spacing: 2px;
                             "
                             >DOCS</a
                         >
@@ -161,22 +163,210 @@
             <div class="container-fluid">
                 <div style="padding-top: 30px">
                     <center>
-                        <h1 style="color: white">PNG Extraction</h1>
+                        <h1 style="color: white; letter-spacing: 2px">
+                            PNG Extraction
+                        </h1>
                     </center>
                 </div>
                 <div
-                    class="col-5"
+                    class="col-5 config"
                     style="
+                        padding: 20px;
                         margin-top: 20px;
                         margin-left: 55px;
-                        background: rgba(189, 195, 199, 0.55);
-                        mix-blend-mode: difference;
-                        opacity: 0.25;
+                        background: rgba(255, 255, 255, 0.25);
                         border-radius: 25px;
                     "
                 >
                     <center>
-                        <h3 style="color: white">Edit Configurations</h3>
+                        <h3 style="color: white; letter-spacing: 1px">
+                            Edit Configurations
+                        </h3>
+                    </center>
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">DICOM Home Folder</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="file"
+                                webkitdirectory
+                                mozdirectory
+                                id="fileImg"
+                                name="document"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Output Folder</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                type="file"
+                                class="form-control"
+                                webkitdirectory
+                                mozdirectory
+                                id="fileImg"
+                                name="document"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Depth</div>
+                        </div>
+                        <div class="col" style="width: 100%">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="E.g. 1 if in DICOMHome/imgs/img1.dcm"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Split into chunks</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="number"
+                                placeholder="Recommended 1, for very large 2"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Use Processes</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="number"
+                                placeholder="No. of Cores of CPU to use. Default 0 for all"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Flattened To Level</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Default:'patient';Values can be ‘study’ or ‘series’"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">DICOM Home Folder</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="number"
+                                placeholder="Recommended 1, for very large 2"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">To 16-bit</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="True else set False if 8-bit is needed"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Print Images</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Default True, can be set to False"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Common Headers Only</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Default False"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Send Email</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="True if you want to receive email else false"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="text">Email</div>
+                        </div>
+                        <div class="col">
+                            <input
+                                class="form-control"
+                                type="email"
+                                placeholder="Enter your Email"
+                            />
+                        </div>
+                    </div>
+
+                    <center>
+                        <div class="row" style="margin-top: 20px">
+                            <div class="col">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-info"
+                                >
+                                    RESET
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-success"
+                                    style="color: white"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
                     </center>
                 </div>
             </div>
